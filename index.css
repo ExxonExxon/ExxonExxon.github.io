@@ -14,8 +14,8 @@ body {
 
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
 
     padding: 12px 0px;
@@ -46,6 +46,8 @@ nav {
     display: inline-block;
     padding: 8px 12px;
 
+    font-weight: 400;
+
     text-decoration: none;
 
     color: black;
@@ -75,21 +77,44 @@ nav {
     align-items: center;
     justify-content: center;
 
+    text-align: center;
+
     padding: 25px 0;
-    gap: 19px;
-    height: 250px;
+    gap: 23px;
+    height: 650px;
 }
 
 
 .hero h1 {
-    font-size: 60px;
+    font-size: 70px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 19px;
 }
 
-.hero button {
-    padding: 8px 35px;
+.hero a {
+    cursor: pointer;
+
+    padding: 14px 45px;
+    margin-top: 20px;
+
+    background-color: rgb(255, 194, 80);
+    border: none;
+    border-radius: 13px;
+
+    text-decoration: none;
+    color: black;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero a:hover {
+    transform: scale(1.04);
+    background-color: rgb(255, 182, 47);
+    font-weight: 450;
 }
 

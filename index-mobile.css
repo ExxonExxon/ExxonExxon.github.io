@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+    .nav-right-side ul {
+        gap: 0;
+    }
+
+    .nav-right-side a {
+        font-weight: 300;
+        padding: 8px 8px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}
