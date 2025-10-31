@@ -3,163 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomas Gorjux</title>
+    <title>Kiwi</title>
 
-    <link rel="stylesheet" href="index.css">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
-
-    <!-- SCRIPTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-    <!-- Navigation bar -->
+    <!-- Nav -->
     <nav>
-        <div class="nav-left">
-            <h1 class="nav-title">Tomas Gorjux</h1>
+        <div class="nav-left-side">
+            <h1>Kiwi</h1>
         </div>
-        <div class="hidden" id="alert">
-            <p id="alert-msg">The message sent sucesfully</p>
-        </div>
-        <div class="nav-right">
+
+        <div class="nav-right-side">
             <ul>
-                <li><a href="#about-me-section">About Me</a></li>
-                <li><a href="#footer-section">Contact Me</a></li>
-                <li><a href="#projects-section">My Projects</a></li>
+                <li><a class="nav-link-active" href="#">Contact</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- About Me Section -->
-    <section class="about-me" id="about-me-section">
-        <div class="about-me-container">
-            <div class="portrait-about-me">
-                <img src="PORTRAIT.webp" alt="Portrait of Tomas Gorjux">
-                <h3>Tomas Gorjux</h3>
-            </div>
 
-            <div class="about-me-content">
-                <h2 class="about-me-title">About Me</h2>
-                <h4 class="about-me-profession">Web Designer</h4>
-                <p class="about-me-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
+    <div class="main-content">
+        <div class="hero">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem Ipsum Lorem IpsumLorem Ipsum</p>
+            <button>Contact Me</button>
         </div>
-    </section>
+    </div>
 
 
-    <!-- Projects Section -->
-    <section id="projects-section">
-        <h1 class="project-title">My Projects</h1>
-        <div class="projects-container">
-
-            <div class="project-card">
-                <img src="PORTRAIT.webp" alt="Project Image">
-                <div class="project-card-content">
-                    <h4>Project Title</h4>
-                    <p>Project Description</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="PORTRAIT.webp" alt="Project Image">
-                <div class="project-card-content">
-                    <h4>Project Title</h4>
-                    <p>Project Description</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="PORTRAIT.webp" alt="Project Image">
-                <div class="project-card-content">
-                    <h4>Project Title</h4>
-                    <p>Project Description</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact-section" class="contact-me">
-        <div class="contact-me-container">
-            <h1>Get in Contact with me!</h1>
-            <form class="contact-form" onsubmit="sendEmail(event)">
-                <label for="name">Name</label>
-                <input type="text" name="name" placeholder="Enter your name here" required>
-
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter your Email" required>
-
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Enter your message"></textarea>
-
-                <button type="submit">Contact</button>
-            </form>
-        </div> 
-    </section>
-
-    <!-- footer Section -->
-    <section id="footer-section" class="footer-me">
-        <ul>
-            <li>
-                <a href="https://github.com/ExxonExxon">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="mailto:your.email@example.com">
-                    <i class="far fa-envelope"></i>
-                </a>
-            </li>
-        </ul>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-
-    <script type="text/javascript">
-
-        (function() {
-            emailjs.init("iPXyFM_v59tYW7l2E"); // from EmailJS dashboard
-        })()
-        function sendEmail(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector("button");
-            btn.disabled = true;
-            btn.classList.add("contact-me-button-disabled");
-            btn.textContent = "Sending...";
-
-            emailjs.sendForm("service_9b4h1am", "template_nb8qjqq", e.target)
-                .then(() => {
-                    btn.disabled = false;
-                    btn.classList.remove("contact-me-button-disabled");
-                    btn.textContent = "Contact";
-                    showAlert("Message sent!", false); // show green alert
-                }, (error) => {
-                    btn.disabled = false;
-                    btn.classList.remove("contact-me-button-disabled");
-                    btn.textContent = "Contact";
-                    showAlert("Failed: " + JSON.stringify(error), true); // show red alert
-                });
-        }
-
-    </script>
-
-    <script src="index.js">
-
-    </script>
 </body>
 </html>
