@@ -10,7 +10,7 @@
 
     .hero {
         height: 300px;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
     .hero h1 {
@@ -35,7 +35,19 @@
         font-size: 22px;
     }
 
+    .about-me-img-card img {
+        width: 200px;
+        height: 200px;
+    }
+
     
 
 
+}
+
+
+@media (min-height: 1080px) {
+    #down-arrow {
+        display: none;
+    }
 }
