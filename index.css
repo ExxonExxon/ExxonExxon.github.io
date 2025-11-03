@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Roboto';
-    background-color: whitesmoke;
+    background-color: rgba(240, 240, 240, 1);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -20,7 +20,7 @@ nav {
 
     padding: 12px 0px;
 
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(240, 240, 240, 0.8);
     backdrop-filter: blur(15px);
 }
 
@@ -76,12 +76,14 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 
     text-align: center;
 
     padding: 25px 0;
     gap: 23px;
-    height: 650px;
+    height: 700px;
+    margin-bottom: 275px;
 }
 
 
@@ -92,6 +94,29 @@ nav {
 .hero p {
     font-size: 19px;
 }
+
+#down-arrow {
+    position: absolute;
+    bottom: 50px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    animation: bounce 1s infinite;
+    transition: opacity 0.5s ease; /* smooth fade */
+}
+
+#down-arrow.hidden {
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+
+
 
 .hero a {
     cursor: pointer;
@@ -116,5 +141,114 @@ nav {
     transform: scale(1.04);
     background-color: rgb(255, 182, 47);
     font-weight: 450;
+}
+
+
+
+
+
+
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.about-me-img-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 12px;
+    
+    gap: 20px;
+    padding: 40px;
+
+    border: 1px solid black;
+}
+
+
+
+.about-me-img-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.about-me-img-card-text h2 {
+    font-weight: 350;
+    font-size: 30px;
+}
+
+.about-me-img-card-text h3 {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+
+.about-me-img-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+    
+    border-radius: 100%;
+}
+
+
+
+.about-me-text-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+
+
+    border-radius: 12px;
+    border: 1px solid black;
+
+    max-width: 800px;
+}
+
+.about-me-text-card p {
+    font-size: 22px;
+    font-weight: 350;
+}
+
+.about-me-text-card h1 {
+    font-size: 35px;
+}
+
+.about-me-text-card a {
+    display: inline-block;
+    align-self: flex-start;
+    
+
+    padding: 14px 45px;
+    margin-top: 20px;
+    
+
+    
+
+    background-color: rgb(255, 194, 80);
+    border: none;
+    border-radius: 13px;
+
+    text-decoration: none;
+    color: black;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.about-me-text-card a:hover {
+    background-color: rgb(255, 182, 47);
 }
 

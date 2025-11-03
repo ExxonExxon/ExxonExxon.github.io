@@ -8,8 +8,34 @@
         padding: 8px 8px;
     }
 
+    .hero {
+        height: 300px;
+        margin-bottom: 60px;
+    }
+
     .hero h1 {
         font-size: 40px;
     }
+
+    .hero i {
+        display: none;
+    }
+
+
+    .about-me {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-me-text-card p {
+        font-size: 18px;
+    }
+
+    .about-me-text-card h1 {
+        font-size: 22px;
+    }
+
+    
+
 
 }
