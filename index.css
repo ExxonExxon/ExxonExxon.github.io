@@ -72,6 +72,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 80px;
+
 }
 
 /* HERO */
@@ -184,12 +185,12 @@ section {
 .about-me-img-card-text {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 
 .about-me-img-card-text h2 {
-    font-weight: 350;
+    font-weight: 400;
     font-size: 30px;
 }
 
@@ -258,14 +259,17 @@ section {
 
 .featured-projects {
     display: grid;
-
+    gap: 100px;
+    margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .featured-project-card {
     display: flex;
     flex-direction: column;
+    
     gap: 25px;
+    margin-top: 25px;
 
     padding: 35px;
     max-width: 400px;

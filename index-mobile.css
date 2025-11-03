@@ -1,3 +1,5 @@
+
+/* IPHONE */
 @media (max-width: 600px) {
     .nav-right-side ul {
         gap: 0;
@@ -27,6 +29,14 @@
         gap: 20px;
     }
 
+    .about-me-text-card {
+        padding: 25px;
+    }
+
+    /* .about-me-img-card-text h3 {
+        font-size: 14px;
+    } */
+
     .about-me-text-card p {
         font-size: 18px;
     }
@@ -40,14 +50,38 @@
         height: 200px;
     }
 
-    
+    .featured-projects {
+        grid-template-columns: 1fr; /* single column */
+        justify-items: center;       /* center the single cards */
+    }
+
+    .featured-project-card {
+        padding: 25px;
+    }
 
 
 }
 
-
-@media (min-height: 1080px) {
+/* Just for the start */
+@media (min-height: 1190px) {
     #down-arrow {
         display: none;
     }
+}
+
+
+/* Ipad */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .featured-projects {
+        display: grid;
+        grid-template-columns: repeat(2, 420px);
+        gap: 40px;              /* consistent spacing */
+        justify-content: center; /* centers the two columns */
+        padding: 20px 0;        /* breathing room top/bottom */
+    }
+
+    .featured-project-card {
+        max-width: 450px; /* matches grid column width */
+    }
+
 }
